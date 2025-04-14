@@ -1,0 +1,57 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:14
+    environment:
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "passw"
+      POSTGRES_DB: "postgres"
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "postgres"]
+      interval: 30s
+      retries: 3
+      timeout: 10s
+      start_period: 5s
+    networks:
+      - app-network
+
+  backend:
+    build:
+      context: .
+      target: backend-build
+    ports:
+      - "4000:4000"
+    environment:
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_USERNAME: postgres
+      DB_PASSWORD: passw
+      DB_NAME: postgres
+      PORT: 4000
+      JWT_SECRET: BestChange
+      GMAIL_USER: mysytes2490@gmail.com
+      GMAIL_PASS: epsz mpav quir dlnq
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - app-network
+
+  nginx:
+    build: .
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    networks:
+      - app-network
+
+volumes:
+  db_data:
+
+networks:
+  app-network:
+    driver: bridge

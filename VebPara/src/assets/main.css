@@ -1,0 +1,466 @@
+.card {
+    width: 270px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    border: 0.5px solid #595959; /* Толщина и цвет границы */
+    background: #f0f0f0;
+}
+
+h7{
+    font-weight: bold;
+}
+
+.icons-container {
+    position: absolute; /* Иконки будут позиционироваться относительно ближайшего родителя с position: relative */
+    top: 0; /* Устанавливаем положение сверху */
+    right: 0; /* Выравниваем вправо */
+    z-index: 999; /* Очень высокий z-index, чтобы перекрывать другие элементы */
+    display: flex; /* Располагаем иконки горизонтально */
+    gap: 10px; /* Расстояние между иконками */
+    padding: 10px; /* Отступы */
+    pointer-events: none; /* Иконки не будут взаимодействовать с курсором */
+}
+.navbar-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px; /* Для отступов сверху и снизу */
+
+}
+
+.form-wrapper {
+    border-radius: 15px;
+    background: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 100%;
+    max-width: 400px; /* Ограничение ширины для большого экрана */
+    padding: 20px; /* Увеличены отступы внутри формы */
+}
+
+.form-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.form-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    text-align: left;
+}
+
+.form-label {
+    display: block;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    color: #555;
+}
+
+.form-input {
+    width: 100%; /* Теперь поля ввода полностью заполняют форму */
+    padding: 0.75rem;
+    border: 1px solid #ddd; /* Изменено на светлый цвет, чтобы не было слишком контрастно */
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    box-sizing: border-box; /* Учитывается padding и border */
+    transition: border-color 0.2s ease-in-out;
+}
+
+.form-input:focus {
+    border-color: #333; /* Немного темнее при фокусе */
+    box-shadow: 0 0 0 1px #333;
+}
+.footer-container {
+    position: relative; /* Чтобы иконки могли быть внутри footer, но располагаться поверх остальных элементов */
+}
+.navbar5{
+display: flex;
+width: 98vw;
+justify-content: space-between; /* Равномерно распределяет ссылки */
+background-color: #f0f0f0; /* Серый фон */
+padding: 10px; /* Отступы внутри */
+}
+.navbar1 {
+    display: flex;
+    width: 97vw;
+    justify-content: space-between; /* Равномерно распределяет ссылки */
+    background-color: #f0f0f0; /* Серый фон */
+    padding: 10px; /* Отступы внутри */
+}
+.icons-container-f {
+    position: absolute; /* Иконки будут позиционироваться относительно ближайшего родителя с position: relative */
+    top: 0; /* Устанавливаем положение сверху */
+    right: 0; /* Выравниваем вправо */
+    z-index: 999; /* Очень высокий z-index, чтобы перекрывать другие элементы */
+    display: flex; /* Располагаем иконки горизонтально */
+    gap: 10px; /* Расстояние между иконками */
+    padding: 10px; /* Отступы */
+    pointer-events: none; /* Иконки не будут взаимодействовать с курсором */
+}
+
+.footer-container-f {
+    position: relative; /* Чтобы иконки могли быть внутри footer, но располагаться поверх остальных элементов */
+}
+
+
+.nav-link-f {
+    flex: 1; /* Растягивает каждую ссылку равномерно */
+    text-align: center; /* Центрирует текст */
+    text-decoration: none; /* Убирает подчеркивание */
+    color: black; /* Цвет текста */
+    padding: 10px 0; /* Вертикальные отступы у ссылок */
+}
+.nav-link-f:hover {
+    background-color: #d3d3d3; /* Серый цвет при наведении */
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap; /* Разрешаем перенос элементов */
+    justify-content: center; /* Центрируем контейнер */
+    gap: 10px; /* Отступы между ссылками */
+}
+
+.nav-link {
+    font-size: 16px;
+    color: black;
+    text-decoration: none;
+    width: 48%; /* Устанавливаем ширину для 2 столбцов */
+    text-align: center; /* Центрируем текст в ссылке */
+}
+
+/* Блок с адресом и номером телефона слева */
+.address {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Расстояние между элементами */
+    text-align: left; /* Выравнивание текста по левому краю */
+    width: 100%;
+    margin-top: 10px;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #F2F2F2;
+    color: black;
+    padding: 20px 10px;
+    font-family: Arial, sans-serif;
+}
+
+.icons-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+}
+
+.info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.text-container {
+    margin-bottom: 10px;
+    text-align: right;
+}
+
+.phone-number {
+    display: block;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.extra-text {
+    margin-top: 10px;
+}
+
+.privacy-policy {
+    margin-top: auto;
+    text-align: right;
+}
+
+.privacy-policy a {
+    color: #0f7df2;
+    text-decoration: none;
+}
+
+.privacy-policy a:hover {
+    text-decoration: underline;
+}
+
+.card-image img {
+    width: 100%; /* Делаем изображение полностью шириной контейнера */
+    border-bottom: 1px solid #ddd; /* Разделяем изображение и контент */
+    height: 200px;
+}
+
+.card-content {
+
+    padding: 10px;
+    background: #f0f0f0;
+}
+
+.car-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.car-price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+}
+.disabled-button {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    background: #ccc; /* Серый цвет для неактивности */
+    color: #888; /* Более светлый цвет текста */
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: not-allowed; /* Указатель мыши в виде запрета */
+    opacity: 0.7; /* Уменьшенная прозрачность */
+    pointer-events: none; /* Отключение кликабельности */
+}
+.disabled-link {
+    color: #888;
+    text-decoration: none;
+    pointer-events: none; /* Отключаем кликабельность */
+    opacity: 0.6;
+}
+/* Общие стили для адаптивности */
+.horizontal-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
+
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    background-color: #000;
+    padding: 10px;
+}
+.icons-container {
+     position: absolute; /* Иконки будут позиционироваться относительно ближайшего родителя с position: relative */
+     top: 0; /* Устанавливаем положение сверху */
+     right: 0; /* Выравниваем вправо */
+     z-index: 999; /* Очень высокий z-index, чтобы перекрывать другие элементы */
+     display: flex; /* Располагаем иконки горизонтально */
+     gap: 10px; /* Расстояние между иконками */
+     padding: 10px; /* Отступы */
+     pointer-events: none; /* Иконки не будут взаимодействовать с курсором */
+ }
+
+.footer-container {
+    position: relative; /* Чтобы иконки могли быть внутри footer, но располагаться поверх остальных элементов */
+}
+
+.nav-link {
+    flex: 1; /* Растягивает каждую ссылку равномерно */
+    text-align: center; /* Центрирует текст */
+    text-decoration: none; /* Убирает подчеркивание */
+    color: black; /* Цвет текста */
+    padding: 10px 0; /* Вертикальные отступы у ссылок */
+}
+.nav-link:hover {
+    background-color: #d3d3d3; /* Серый цвет при наведении */
+}
+
+
+.main-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.filter {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+
+.select-option {
+    padding: 10px;
+
+    border: 1px solid #ccc;
+    border-radius: 5px;
+
+}
+
+.button {
+    padding: 10px;
+    background: black;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background: #333;
+}
+
+/* Медиа-запросы для мобильных устройств */
+@media (max-width: 768px) {
+    .card {
+        width: 100%;
+    }
+
+    .details-button {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .filter {
+        width: 100%;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-link {
+        font-size: 16px;
+        padding: 8px 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        gap: 5px;
+    }
+
+    .nav-link {
+        font-size: 12px;
+        padding: 6px 3px;
+    }
+}
+/* Стиль для кнопок при наведении */
+.button:hover {
+    background: #333;
+    transform: scale(1.05); /* Легкое увеличение при наведении */
+    transition: background 0.3s, transform 0.2s ease-in-out;
+}
+
+.details-button:hover {
+    background: #444; /* Немного темнее фон */
+    transform: scale(1.05); /* Легкое увеличение */
+}
+
+/* Для ссылок и кнопок с иконками */
+.nav-link:hover {
+
+    text-decoration: underline; /* Подчеркивание ссылки */
+    transform: scale(1.05); /* Легкое увеличение */
+    transition: background 0.3s, transform 0.2s ease-in-out;
+}
+.i2:hover {
+
+    text-decoration: underline; /* Подчеркивание ссылки */
+    transform: scale(1.05); /* Легкое увеличение */
+    transition: background 0.3s, transform 0.2s ease-in-out;
+}
+/* Стиль для иконок в элементах с детальной информацией */
+.detail-item img:hover {
+    background: #ccc; /* Светлый фон при наведении */
+    transform: scale(1.1); /* Легкое увеличение иконки */
+    transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.stars{
+    height: 40px;
+    width: 40px;
+}
+
+/* Для неактивных кнопок с плавным эффектом */
+.disabled-button:hover {
+    background: #ccc; /* Сохраняем серый цвет, но добавляем немного градиента */
+    transform: none; /* Убираем трансформации */
+    opacity: 0.8; /* Немного увеличиваем прозрачность */
+}
+
+/* Для ссылок при наведении */
+.disabled-link:hover {
+    color: #888;
+    text-decoration: none;
+    opacity: 0.7; /* Немного прозрачнее, чтобы показать неактивность */
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+.disabled-link:hover {
+    color: #888; /* Оставляем тот же цвет */
+    text-decoration: none; /* Оставляем стиль без изменений */
+}
+.disabled-button:hover {
+    background: #ccc; /* Оставляем без изменений при наведении */
+    transform: none; /* Убираем трансформации */
+}
+.car-details {
+    display: flex; /* Делаем элементы в строку */
+    flex-wrap: wrap; /* Разрешаем перенос элементов */
+    gap: 10px; /* Отступы между элементами */
+    margin-bottom: 15px;
+}
+
+
+.detail-item {
+    display: flex;
+    align-items: center; /* Выравниваем текст и иконки по центру */
+    gap: 10px; /* Отступ между иконкой и текстом */
+}
+
+.detail-item img {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%; /* Круглые иконки */
+    background: #e0e0e0; /* Фон для иконки */
+    padding: 3px;
+}
+
+.details-button {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    background: black;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.details-button:hover {
+    background: #333;
+    transform: scale(1.05); /* Лёгкое увеличение при наведении */
+}

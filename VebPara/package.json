@@ -1,0 +1,32 @@
+{
+  "name": "vebpara",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.0.0",
+    "axios": "^1.7.9",
+    "emailjs-com": "^3.2.0",
+    "jwt-decode": "^4.0.0",
+    "npx": "^10.2.2",
+    "router": "^2.0.0",
+    "swiper": "^11.2.2",
+    "vite-plugin-vue-inspector": "^5.3.1",
+    "vue": "^3.5.13",
+    "vue-router": "^4.5.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.1",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.5.1",
+    "sass-embedded": "^1.83.4",
+    "vite": "^6.0.11",
+    "vite-plugin-vue-devtools": "^7.6.8"
+  },
+  "packageManager": "yarn@4.7.0+sha512.5a0afa1d4c1d844b3447ee3319633797bcd6385d9a44be07993ae52ff4facabccafb4af5dcd1c2f9a94ac113e5e9ff56f6130431905884414229e284e37bb7c9"
+}

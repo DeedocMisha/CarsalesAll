@@ -1,0 +1,328 @@
+// Переменные
+$primary-bg-color: #fff;
+$secondary-bg-color: #F2F2F2;
+$text-color: black;
+$border-radius: 10px;
+$font-family-base: Arial, sans-serif;
+$font-family-mono: 'JetBrains Mono ExtraBold';
+$font-family-k2d: K2D;
+/* Общие стили для мобильных устройств */
+@media (max-width: 768px) {
+  .h100 {
+    font-size: 24px; /* Уменьшаем размер заголовка */
+  }
+
+  .v47 {
+    font-size: 14px; /* Уменьшаем размер подзаголовка */
+  }
+
+  .navbar1 {
+    flex-direction: column; /* Располагаем ссылки вертикально */
+    gap: 10px; /* Уменьшаем отступы между ссылками */
+  }
+
+  .nav-link {
+    padding: 8px 0; /* Уменьшаем отступы внутри ссылок */
+  }
+
+  .footer-container {
+    padding: 10px; /* Уменьшаем отступы внутри футера */
+  }
+
+  .icons-container {
+    position: static; /* Убираем абсолютное позиционирование для иконок */
+    justify-content: center; /* Центрируем иконки */
+    padding: 5px; /* Уменьшаем отступы */
+  }
+
+  .info-container {
+    text-align: center; /* Центрируем текст */
+  }
+
+  .address {
+    font-size: 14px; /* Уменьшаем размер текста адреса */
+  }
+
+  .privacy-policy {
+    position: static; /* Убираем абсолютное позиционирование */
+    text-align: center; /* Центрируем текст */
+    margin-top: 10px; /* Добавляем отступ сверху */
+  }
+
+  .image-container {
+    width: 50px; /* Уменьшаем размер круга */
+    height: 50px;
+  }
+
+  .text-container h2 {
+    font-size: 18px; /* Уменьшаем размер заголовка */
+  }
+
+  .main-content {
+    flex-direction: column; /* Располагаем элементы в одну колонку */
+  }
+
+  .sections {
+    flex-direction: column; /* Располагаем карточки в одну колонку */
+  }
+
+  .section {
+    flex: 1 1 100%; /* Одна карточка на всю ширину */
+  }
+
+  .card {
+    width: 100%; /* Карточка занимает всю ширину */
+  }
+}
+
+@media (max-width: 480px) {
+  .h100 {
+    font-size: 20px; /* Еще больше уменьшаем размер заголовка */
+  }
+
+  .v47 {
+    font-size: 12px; /* Еще больше уменьшаем размер подзаголовка */
+  }
+
+  .navbar1 {
+    gap: 5px; /* Еще больше уменьшаем отступы между ссылками */
+  }
+
+  .nav-link {
+    font-size: 14px; /* Уменьшаем размер шрифта ссылок */
+  }
+
+  .address {
+    font-size: 12px; /* Еще больше уменьшаем размер текста адреса */
+  }
+
+  .privacy-policy a {
+    font-size: 12px; /* Уменьшаем размер текста ссылки на политику конфиденциальности */
+  }
+
+  .image-container {
+    width: 40px; /* Еще больше уменьшаем размер круга */
+    height: 40px;
+  }
+
+  .text-container h2 {
+    font-size: 16px; /* Еще больше уменьшаем размер заголовка */
+  }
+}
+@media (max-width: 768px) {
+  header .horizontal-container {
+    flex-direction: column; /* Располагаем элементы шапки вертикально */
+    align-items: center; /* Центрируем элементы */
+  }
+
+  header .v47 {
+    margin-left: 0; /* Убираем отступ слева */
+    text-align: center; /* Центрируем текст */
+  }
+
+  footer .icons-container {
+    position: static; /* Убираем абсолютное позиционирование */
+    justify-content: center; /* Центрируем иконки */
+  }
+
+  footer .navbar1 {
+    flex-direction: column; /* Располагаем ссылки вертикально */
+    gap: 10px; /* Уменьшаем отступы между ссылками */
+  }
+
+  footer .privacy-policy {
+    position: static; /* Убираем абсолютное позиционирование */
+    text-align: center; /* Центрируем текст */
+    margin-top: 10px; /* Добавляем отступ сверху */
+  }
+}
+@media (max-width: 768px) {
+  .card {
+    width: 50%; /* Карточка занимает всю ширину */
+    margin-bottom: 10px; /* Добавляем отступ между карточками */
+  }
+}
+// Общие стили
+body {
+  margin: 0;
+  font-family: $font-family-base;
+}
+:root {
+  --circle-diameter: 80px; /* Диаметр круга */
+  --circle-border-color: black; /* Цвет границы */
+  --circle-border-width: 3px; /* Толщина границы */
+  --circle-bg-color: gray; /* Цвет фона */
+}
+
+.image-container {
+  position: relative; /* Для управления позиционированием */
+  width: var(--circle-diameter); /* Устанавливаем ширину */
+  height: var(--circle-diameter); /* Устанавливаем высоту */
+  background-color: var(--circle-bg-color); /* Цвет фона */
+  border: var(--circle-border-width) solid var(--circle-border-color); /* Настраиваем границы */
+  border-radius: 50%; /* Делаем круг */
+  display: flex; /* Для центрирования содержимого */
+  align-items: center; /* Центрируем по вертикали */
+  justify-content: center; /* Центрируем по горизонтали */
+  overflow: hidden; /* Для обрезки содержимого за пределами круга */
+}
+
+
+
+
+
+
+header {
+  padding: 20px;
+  background-color: $primary-bg-color;
+}
+
+.horizontal-container {
+  display: flex;
+  align-items: center;
+}
+
+.h100 {
+  margin: 0;
+  font-family: $font-family-mono;
+  font-size: 30px;
+  text-align: left;
+}
+
+.v47 {
+  font-family: $font-family-k2d;
+  font-size: 17px;
+  margin-top: -20px;
+  margin-left: 10px;
+}
+
+.i2 {
+  background: rgba(242, 242, 242, 1);
+  border-radius: $border-radius;
+  width: 38px;
+  height: 38px;
+  padding: 4px;
+}
+
+.navbar {
+  align-items: center;
+  horiz-align: center;
+  width: 98.5%;
+  height: 50px;
+  background-color: $secondary-bg-color;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  .nav-link {
+    font-size: 16px;
+    color: $text-color;
+    text-decoration: none;
+  }
+}
+
+.page-title {
+  font-size: 24px;
+  margin-top: 20px;
+}
+
+.main-content {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  flex-wrap: wrap;
+  overflow-x: hidden; /* Прячем все, что выходит за пределы */
+}
+
+.filter {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.search-input, .select-option, .button {
+  padding: 10px;
+  font-size: 16px;
+}
+
+.search-input {
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  background-color: $secondary-bg-color;
+}
+
+.select-option {
+  border: 3px solid $text-color;
+  border-radius: $border-radius;
+  background-color: $secondary-bg-color;
+}
+
+.button {
+  background-color: $text-color;
+  color: white;
+  border: none;
+  font-weight: bold;
+  font-size: 17px;
+  height: 40px;
+  border-radius: $border-radius;
+}
+
+.sections {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 1100px; /* Ограничиваем максимальную ширину */
+  margin: 0 auto; /* Центрируем контейнер */
+
+  .section {
+    flex: 1 1 calc(33.333% - 20px); /* Максимум 3 карточки в строке */
+    min-width: 250px;
+    box-sizing: border-box; /* Чтобы учитывать padding в ширине */
+
+    .card {
+      padding: 10px;
+      margin-bottom: 10px;
+      background-color: $secondary-bg-color;
+      border-radius: 8px;
+      box-sizing: border-box;
+    }
+  }
+}
+
+/* Медиазапросы для адаптивности */
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .main-content {
+    flex-direction: column;
+  }
+
+  .sections {
+    flex-direction: column;
+    max-width: 100%; /* Снимаем ограничение на ширину */
+  }
+
+  .section {
+    min-width: 100%;
+    flex: 1 1 100%; /* Одна карточка на всю ширину */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .nav-link {
+    font-size: 14px;
+  }
+
+  .page-title {
+    font-size: 20px;
+  }
+
+  .select-option, .button {
+    font-size: 14px;
+  }
+}
