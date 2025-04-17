@@ -11,7 +11,7 @@
       <div v-if="loading">
         <a class="Bal" v-if="see" style="color: green" >Ваш баланс: {{ballance}} руб.</a><br><br>
         <button @click="showBalanceModal = true" class="Bal">Пополнить баланс</button>
-        <a class="Bal" v-if="!see" style="color: red">Создайте аккаунт для просмотра баланса</a>
+        <a v-if="!see" style="color: red">Создайте аккаунт для просмотра баланса</a>
       </div>
       <div style="display: flex; justify-content: flex-end; gap: 10px; position: absolute; top: 0; right: 0; margin: 20px;">
         <a href="#/Location"><img src="../assets/images/v47_18.png" class="i2"></a>
