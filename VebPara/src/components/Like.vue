@@ -11,7 +11,7 @@
       <div class="error-icon">⚠️</div>
       <h3>Произошла ошибка</h3>
       <p>{{ error }}</p>
-      <button @click="retryLoading">Попробовать снова</button>
+      <button class="button" @click="retryLoading">Попробовать снова</button>
     </div>
 
     <div v-else class="sections">
@@ -62,7 +62,7 @@
     </div>
     <center>
       <div v-if="filteredCars.length === 0" class="empty-state">
-        <div class="empty-icon">🚗</div>
+
         <h3>Автомобили не найдены</h3>
         <p>Попробуйте изменить параметры поиска</p>
       </div>

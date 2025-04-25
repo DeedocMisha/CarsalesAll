@@ -63,7 +63,7 @@ onMounted(() => {
 
     <!-- Кнопка для показа формы добавления отзыва -->
     <div class="add-review-container">
-      <button @click="showForm = !showForm" class="add-review-button">
+      <button @click="showForm = !showForm" class="button">
         {{ showForm ? 'Отменить' : 'Добавить отзыв' }}
       </button>
     </div>
@@ -109,7 +109,7 @@ onMounted(() => {
     <div v-if="error" class="error-message">
       <span class="error-icon">⚠️</span>
       <p>{{ error }}</p>
-      <button @click="fetchReviews" class="retry-button">Попробовать снова</button>
+      <button @click="fetchReviews" class="button">Попробовать снова</button>
     </div>
 
     <!-- Список отзывов -->
@@ -146,7 +146,7 @@ onMounted(() => {
 
     <!-- Нет отзывов -->
     <div v-if="!isLoading && reviews.length === 0" class="empty-state">
-      <div class="empty-icon">📝</div>
+
       <h3>Пока нет отзывов</h3>
       <p>Будьте первым, кто оставит отзыв!</p>
     </div>

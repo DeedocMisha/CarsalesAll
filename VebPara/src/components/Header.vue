@@ -11,14 +11,19 @@
       <div v-if="loading">
         <a class="Bal" v-if="see" style="color: green" >Ваш баланс: {{ballance}} руб.</a><br><br>
         <button @click="showBalanceModal = true" class="Bal">Пополнить баланс</button>
-        <a v-if="!see" style="color: red">Создайте аккаунт для просмотра баланса</a>
+
       </div>
+      <center>
+        <a v-if="!see" style="color: red; font-size: 20px">Создайте аккаунт для просмотра баланса</a>
+      </center>
       <div style="display: flex; justify-content: flex-end; gap: 10px; position: absolute; top: 0; right: 0; margin: 20px;">
         <a href="#/Location"><img src="../assets/images/v47_18.png" class="i2"></a>
         <a href="#/Liked"><img src="../assets/images/v48_19.png" class="i2"></a>
         <a href="#/Basket"><img src="../assets/images/v74_4.png" class="i2"></a>
       </div>
+
     </div>
+
   </header>
 
   <div class="navbar5">
@@ -55,13 +60,13 @@ import { ref, onMounted } from 'vue';
 import axios from 'axios';
 import { jwtDecode } from "jwt-decode";
 
-const ballance = ref<any>(null);
-const see = ref(false);
-const loading = ref(false);
-const Show = ref(false);
-const showBalanceModal = ref(false);
-const topUpAmount = ref<number | null>(null);
-const balanceError = ref<string | null>(null);
+  const ballance = ref<any>(null);
+  const see = ref(false);
+  const loading = ref(false);
+  const Show = ref(false);
+  const showBalanceModal = ref(false);
+  const topUpAmount = ref<number | null>(null);
+  const balanceError = ref<string | null  >(null);
 
 const fetchCar = async () => {
   try {
@@ -82,38 +87,38 @@ const fetchCar = async () => {
   }
 };
 
-const topUpBalance = async () => {
-  if (!topUpAmount.value || topUpAmount.value <= 0) {
-    balanceError.value = 'Введите корректную сумму';
-    return;
-  }
+      const topUpBalance = async () => {
+        if (!topUpAmount.value || topUpAmount.value <= 0) {
+          balanceError.value = 'Введите корректную сумму';
+          return;
+        }
 
-  try {
-    const token = localStorage.getItem('authToken');
-    const decode = jwtDecode(token);
-    const UserId = decode.Id;
+        try {
+          const token = localStorage.getItem('authToken');
+          const decode = jwtDecode(token);
+          const UserId = decode.Id;
 
-    const response = await axios.post(
-        'api/users/PostBalance',
-        {
-          UserId: UserId,
-          balance: topUpAmount.value
-        },
-    );
+          const response = await axios.post(
+              'api/users/PostBalance',
+              {
+                UserId: UserId,
+                balance: topUpAmount.value
+              },
+          );
 
-    if (response.data.success) {
-      ballance.value = (parseInt(ballance.value) + topUpAmount.value).toString();
-      showBalanceModal.value = false;
-      topUpAmount.value = null;
-      balanceError.value = null;
+          if (response.data.success) {
+            ballance.value = (parseInt(ballance.value) + topUpAmount.value).toString();
+            showBalanceModal.value = false;
+            topUpAmount.value = null;
+            balanceError.value = null;
 
-    }
-    location.reload();
-  } catch (error) {
-    console.error('Ошибка при пополнении баланса:', error);
-    balanceError.value = error.response?.data?.message || 'Ошибка при пополнении баланса';
-  }
-};
+          }
+          location.reload();
+        } catch (error) {
+          console.error('Ошибка при пополнении баланса:', error);
+          balanceError.value = error.response?.data?.message || 'Ошибка при пополнении баланса';
+        }
+      };
 
 onMounted(() => {
   fetchCar();

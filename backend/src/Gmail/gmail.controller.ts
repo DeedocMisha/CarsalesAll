@@ -3,7 +3,7 @@ import { GmailService } from './gmail.service';
 import { SendMessDto } from './dto/sendMess.dto';
 import { ConfigService } from '@nestjs/config';
 
-@Controller('api')
+@Controller('')
 export class GmailController {
   private readonly logger = new Logger(GmailController.name);
 

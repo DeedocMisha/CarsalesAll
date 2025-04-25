@@ -46,7 +46,7 @@
 
       <div v-if="!isLoading && !error" class="sections">
         <div v-if="filteredCars.length === 0" class="empty-state">
-          <div class="empty-icon">🚗</div>
+
           <h3>Автомобили не найдены</h3>
           <p>Попробуйте изменить параметры поиска</p>
         </div>
@@ -115,7 +115,7 @@
     <div v-if="error" class="error-message">
       <span class="error-icon">⚠️</span>
       <p>{{ error }}</p>
-      <button @click="fetchCars" class="retry-button">Попробовать снова</button><br><br>
+      <button @click="fetchCars" class="button">Попробовать снова</button><br><br>
     </div>
   </center>
     <center v-if="!isLoading && !error && filteredCars.length > 0">

@@ -33,6 +33,6 @@ export default createRouter ({
         { path: '/car/:id', component: MoreInfo },
     ],
     scrollBehavior() {
-        return { top: 0 }; // Теперь при каждом переходе будет прокрутка наверх
+        return { top: 0 };
     }
 })

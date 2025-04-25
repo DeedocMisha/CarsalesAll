@@ -5,17 +5,15 @@ import { writeFileSync } from 'fs';
 import * as dotenv from 'dotenv';
 
 
-// Загружаем переменные окружения из .env файла
-
 dotenv.config();
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.enableCors();
-  const port = process.env.PORT || 3000; // Если PORT не задан, используем 3000 по умолчанию
+  const port = process.env.PORT || 4000;
   // Настройка Swagger
   const config = new DocumentBuilder()
     .setTitle('API Documentation')
-    .setDescription('   API description')
+    .setDescription('API description')
     .setVersion('1.0')
     .addTag('api')
     .build();
